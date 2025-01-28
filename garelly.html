@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GARELLY</title>
+
+  <!--  font awesome cdn link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <!-- custom js file link -->
+  <script src="js/script.js"></script>
+  <!-- custom css file link -->
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+
+  <!--header starts-->
+
+  <div class="top-bar">
+    <span><ion-icon name="call-outline"></ion-icon> +250 784931009</span>    <ul>
+      <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+      <li><a href="#"><ion-icon name="logo-youtube"></ion-icon></a></li>
+      <li><a href="#"><ion-icon name="mail-outline"></ion-icon></a></li>
+    </ul>
+  </div>
+
+  <nav>
+    <div class="logo">
+      <a href="home.html"><img src="images/logo.png" alt="logo">Jill Barham Tss</a>
+
+    </div>
+
+
+    <div class="toggle">
+      <a href="#"><ion-icon name="menu-outline"></ion-icon></a>
+    </div>
+    <ul class="menu">
+      <li><a href="home.html">HOME</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="garelly.html">GARELLY</a></li>
+      <li><a href="#">NEWS ▼</a>
+
+        <ul class="dropdown">
+          <li><a href="academic.html">ACADEMICS</a></li>
+          <li><a href="Entertainment.html">ENTERTAINMENT</a></li>
+        </ul>
+
+      </li>
+      <li><a href="#">EDUCATION ▼</a>
+
+        <ul class="dropdown">
+          <li><a href="trades.html">TRADE</a></li>
+          <li><a href="staff.html">STAFF</a></li>
+        </ul>
+
+      </li>
+    </ul>
+  </nav>
+  <!--header endes-->
+  <!--body for home section starts-->
+  <section class="about">
+    <h1>GARELLY</h1>
+    <p style="font-weight: bold">
+      JILL BARHAM All Garelly
+    </p>
+    </section>
+  <section class=body>
+    <ul>
+      <li>
+        <a href="">
+          <div class="garelly">
+          <figure>
+            <img src='images/tor1.jpeg'>
+            <figcaption>TOUR</figcaption>
+              </figure>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <figure>
+            <img src='images/tor 6.jpeg'>
+            <figcaption>TOUR</figcaption>
+          </figure>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <figure>
+            <img src='images/tor 4.jpeg'>
+            <figcaption>TOUR</figcaption>
+          </figure>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <figure>
+            <img src='images/jill1.jpeg'>
+            <figcaption>JILL BARHAM TSS</figcaption>
+          </figure>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <figure>
+            <img src='images/jill.jpeg'>
+            <figcaption>JILL BARHAM TSS</figcaption>
+          </figure>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <figure>
+            <img src='images/jill2.jpeg'>
+            <figcaption>JILL BARHAM TSS</figcaption>
+          </figure>
+          </div>
+        </a>
+      </li>
+    </ul>
+    </section>
+
+
+  <!--body section ends-->
+
+  <!--loader-->
+  <div class="loader"></div>
+  <!--babyeyi download btn-->
+  <a href="files/babyeyi.pdf" download class="btn btn--download">DOWNLOAD <SPan class="u-bolder">BABYEYI</SPan></a>
+  <!--babyeyi download btn-->
+  <!--Footer starts-->
+  <footer>
+    <div class="container" id="god">
+      <div class="footer-content">
+        <h4>CONTACT US</h4>
+        <P>Phone: +250 784931009</P>
+        <p>Email: jillbarhamtss@gmail.com</p>
+        <p>Instagram: jillbarhamtss</p>
+        <p>Youtube:Jill Barham Tss</p>
+      </div>
+      <div class="footer-content">
+        <h4>QUICK LINKS</h4>
+        <ul class="list-b">
+          <li><a href="home.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+
+        </ul>
+      </div>
+      <div class="footer-content">
+        <H4>LANGUAGE</H4>
+        <ul class="list-b">
+          <li><a href="#">KINYARWANDA</a></li>
+          <li><a href="#">ENGLISH</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="buttom-bar">
+      <p>©2025 Remera Frank / Ishimwe Thierry / Igiraneza Billygate ALL RIGHTS SERVED.</p>
+    </div>
+  </footer>
+  <!--Footer ends-->
+  <!--LINKS-->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $(".toggle").on("click", function () {
+        if ($(".menu").hasClass("active")) {
+          $(".menu").removeClass("active");
+          $(this).find("a").html("<ion-icon name='menu-outline'></ion-icon>");
+
+        }
+        else {
+          $(".menu").addClass("active");
+          $(this).find("a").html("<ion-icon name='close-outline'></ion-icon>");
+
+        }
+
+      });
+    });
+  </script>
+</body>
+
+</html>
