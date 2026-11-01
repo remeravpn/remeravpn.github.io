@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050b14" />
+  <title>KEISHA // AI Interface</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="scanlines"></div>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">K</span><div><strong>KEISHA</strong><small>PERSONAL INTELLIGENCE SYSTEM</small></div></div>
+      <div class="system-status"><i class="pulse-dot"></i><span id="systemState">SYSTEM ONLINE</span><span class="divider">/</span><span id="clock">00:00:00</span></div>
+      <button class="icon-button" id="settingsBtn" aria-label="Settings">⚙</button>
+    </header>
+
+    <main class="dashboard">
+      <aside class="side-panel left-panel">
+        <section class="data-block">
+          <div class="eyebrow">01 / SYSTEM STATUS</div>
+          <div class="status-line"><span>Core systems</span><b class="good">NOMINAL</b></div>
+          <div class="meter"><span style="width:92%"></span></div>
+          <div class="status-line"><span>Neural activity</span><b id="neuralValue">68%</b></div>
+          <div class="meter"><span id="neuralMeter" style="width:68%"></span></div>
+          <div class="status-line"><span>Connection</span><b class="good">SECURE</b></div>
+        </section>
+        <section class="data-block">
+          <div class="eyebrow">02 / QUICK ACTIONS</div>
+          <button class="action-row" data-prompt="Give me a system report"><span>◈</span> System report <em>↗</em></button>
+          <button class="action-row" data-prompt="What is on my schedule today?"><span>▦</span> Daily briefing <em>↗</em></button>
+          <button class="action-row" data-prompt="Start focus mode"><span>◎</span> Focus mode <em>↗</em></button>
+          <button class="action-row" data-prompt="Tell me a joke"><span>✧</span> Surprise me <em>↗</em></button>
+        </section>
+        <section class="data-block mini-log">
+          <div class="eyebrow">03 / ACTIVITY LOG</div>
+          <p><i></i> Interface initialized <time>NOW</time></p>
+          <p><i></i> Voice module standing by <time>READY</time></p>
+          <p><i></i> Encryption active <time>ON</time></p>
+        </section>
+      </aside>
+
+      <section class="center-stage">
+        <div class="stage-heading"><span>HOLOGRAPHIC AVATAR</span><span class="stage-line"></span><span>KEISHA v1.0</span></div>
+        <div class="avatar-wrap" id="avatarWrap">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="ring ring-a"></div><div class="ring ring-b"></div>
+          <div class="avatar-core">
+            <div class="face">
+              <div class="head-top"></div>
+              <div class="brow brow-left"></div><div class="brow brow-right"></div>
+              <div class="eye eye-left"><span></span></div><div class="eye eye-right"><span></span></div>
+              <div class="nose"></div>
+              <div class="cheek cheek-left"></div><div class="cheek cheek-right"></div>
+              <div class="mouth"><span></span></div>
+              <div class="jaw-line"></div>
+              <div class="temple temple-left"></div><div class="temple temple-right"></div>
+            </div>
+          </div>
+          <div class="reticle reticle-top">◜ <span>◝</span></div>
+          <div class="reticle reticle-bottom">◟ <span>◞</span></div>
+          <div class="orbit-label label-left">VOICE MATRIX<br><b>ACTIVE</b></div>
+          <div class="orbit-label label-right">AVATAR LINK<br><b>STABLE</b></div>
+        </div>
+        <div class="speaking-state"><span class="equalizer"><i></i><i></i><i></i><i></i><i></i></span><span id="avatarState">AWAITING YOUR COMMAND</span></div>
+        <div class="assistant-reply" id="reply">“At your service. What would you like me to do?”</div>
+        <div class="input-area">
+          <button class="round-tool" id="micBtn" title="Toggle voice animation">🎙</button>
+          <input id="commandInput" type="text" placeholder="Give Keisha a command..." autocomplete="off" />
+          <button class="send-btn" id="sendBtn">SEND <span>➤</span></button>
+        </div>
+        <div class="hint">PRESS ENTER TO SEND <span>•</span> TAP THE MICROPHONE TO SIMULATE VOICE</div>
+      </section>
+
+      <aside class="side-panel right-panel">
+        <section class="data-block">
+          <div class="eyebrow">04 / ENVIRONMENT</div>
+          <div class="weather-icon">☼</div>
+          <div class="temperature">24<span>°C</span></div>
+          <div class="weather-desc">KIGALI <span>•</span> CLEAR SKY</div>
+          <div class="thin-rule"></div>
+          <div class="status-line"><span>Local time</span><b id="localTime">--:--</b></div>
+          <div class="status-line"><span>Interface mode</span><b>HOLOGRAPHIC</b></div>
+        </section>
+        <section class="data-block">
+          <div class="eyebrow">05 / MEMORY CORE</div>
+          <div class="memory-ring"><div><strong>84%</strong><small>CAPACITY</small></div></div>
+          <div class="status-line"><span>Personal context</span><b class="good">READY</b></div>
+          <div class="status-line"><span>Last sync</span><b>JUST NOW</b></div>
+        </section>
+        <section class="data-block">
+          <div class="eyebrow">06 / ABOUT KEISHA</div>
+          <p class="about-text">Your personal AI interface. Designed to listen, think, and help you get things done.</p>
+          <div class="tag-row"><span>VOICE</span><span>VISION</span><span>ASSIST</span></div>
+        </section>
+      </aside>
+    </main>
+    <footer><span>KEISHA INTELLIGENCE NETWORK</span><span>ALL SYSTEMS OPERATIONAL</span><span>© 2026</span></footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
