@@ -1,0 +1,27 @@
+{
+  "name": "rwanda-roommate-housing",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "seed": "node prisma/seed.js",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "14.x",
+    "react": "18.x",
+    "react-dom": "18.x",
+    "@prisma/client": "5.x",
+    "prisma": "5.x",
+    "tailwindcss": "3.x",
+    "postcss": "8.x",
+    "autoprefixer": "10.x",
+    "heroicons-react": "2.x"
+  },
+  "devDependencies": {
+    "eslint": "8.x",
+    "eslint-config-next": "14.x"
+  }
+}

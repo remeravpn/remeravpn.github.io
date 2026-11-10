@@ -1,0 +1,51 @@
+// prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model District {
+  id        Int     @id @default(autoincrement())
+  name      String
+  sectors   Sector[]
+  houses    House[]
+}
+
+model Sector {
+  id          Int      @id @default(autoincrement())
+  name        String
+  districtId  Int
+  district    District @relation(fields: [districtId], references: [id])
+  houses      House[]
+}
+
+model House {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  price       Float
+  imgUrl      String?
+  districtId  Int
+  sectorId    Int
+  district    District @relation(fields: [districtId], references: [id])
+  sector      Sector   @relation(fields: [sectorId], references: [id])
+}
+
+model Roommate {
+  id            Int      @id @default(autoincrement())
+  name          String
+  age           Int
+  gender        String
+  bio           String
+  hobbies       String   // comma‑separated for simplicity
+  personality   String   // short descriptor e.g. "outgoing"
+  districtId    Int
+  sectorId      Int
+  district      District @relation(fields: [districtId], references: [id])
+  sector        Sector   @relation(fields: [sectorId], references: [id])
+}
